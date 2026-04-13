@@ -1596,10 +1596,7 @@
             localStorage.setItem('lang', currentLang);
         });
 
-        if (localStorage.getItem('lang')) {
-            currentLang = localStorage.getItem('lang');
-            applyTranslations();
-        }
+        applyTranslations();
 
         // Theme toggle
         const savedTheme = localStorage.getItem('theme');
