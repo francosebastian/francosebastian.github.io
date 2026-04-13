@@ -740,11 +740,16 @@
             <nav>
                 <a href="#" class="logo">Franco Arraño</a>
                 <ul class="nav-links">
-                    <li><a href="#about">Sobre mí</a></li>
-                    <li><a href="#experience">Experiencia</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Educación</a></li>
+                    <li><a href="#about" data-i18n="nav-about">Sobre mí</a></li>
+                    <li><a href="#experience" data-i18n="nav-experience">Experiencia</a></li>
+                    <li><a href="#projects" data-i18n="nav-projects">Proyectos</a></li>
+                    <li><a href="#skills" data-i18n="nav-skills">Skills</a></li>
+                    <li><a href="#education" data-i18n="nav-education">Educación</a></li>
+                    <li>
+                        <button class="theme-toggle" id="langToggle" aria-label="Cambiar idioma" style="padding: 0.4rem 0.6rem; font-size: 0.85rem;">
+                            <span id="langFlag">🇪🇸 ESP</span>
+                        </button>
+                    </li>
                     <li>
                         <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
                             <i class="fas fa-moon"></i>
@@ -761,16 +766,12 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1><span>Franco Sebastian Arraño Silva</span></h1>
-                    <p class="subtitle">Senior Full Stack Software Engineer</p>
-                    <p>
-                        Ingeniero en informática con más de 9 años de experiencia en el desarrollo de soluciones tecnológicas de alta escala. 
-                        Especializado en arquitecturas cloud-native, microservicios y Java Enterprise. 
-                        Actualmente enfocándome en integración con Inteligencia Artificial.
-                    </p>
+                    <p class="subtitle" data-i18n="hero-subtitle">Senior Full Stack Software Engineer</p>
+                    <p data-i18n="hero-desc"></p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary">
                             <i class="fas fa-envelope"></i>
-                            Contactar
+                            <span data-i18n="btn-contact">Contactar</span>
                         </a>
                         <a href="https://github.com/francosebastian" target="_blank" class="btn btn-secondary">
                             <i class="fab fa-github"></i>
@@ -791,33 +792,33 @@
 
     <section class="about" id="about">
         <div class="container fade-in-up">
-            <h2 class="section-title">Sobre <span>mí</span></h2>
+            <h2 class="section-title"><span data-i18n="lbl-about">Sobre mí</span></h2>
             <div class="about-grid">
                 <div class="about-content">
-                    <p>
+                    <p data-i18n="about-text-1">
                         Soy un profesional de TI con una trayectoria enfocada en el desarrollo de software empresarial de alta calidad. 
                         A lo largo de mi carrera he trabajado en diversos sectores incluyendo fintech, retail y salud, siempre buscando 
                         entregar soluciones que generen valor real al negocio.
                     </p>
-                    <p>
+                    <p data-i18n="about-text-2">
                         Me caracteriza mi capacidad de adaptación a nuevas tecnologías, proactividad y facilidad para el análisis de procesos de negocio. 
                         Tengo experiencia liderando equipos técnicos y trabajando en metodologías ágiles.
                     </p>
-                    <p>
+                    <p data-i18n="about-text-3">
                         <strong>Especialidades:</strong> Java EE, Amazon Web Services, Docker, Kubernetes, Salesforce Integration, IA
                     </p>
                     <div class="highlight">
                         <div class="stat">
-                            <div class="stat-number">9+</div>
-                            <div class="stat-label">Años de experiencia</div>
+                            <div class="stat-number" data-i18n="stat-years">9+</div>
+                            <div class="stat-label" data-i18n="stat-years-label">Años de experiencia</div>
                         </div>
                         <div class="stat">
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Proyectos en producción</div>
+                            <div class="stat-number" data-i18n="stat-projects">15+</div>
+                            <div class="stat-label" data-i18n="stat-projects-label">Proyectos en producción</div>
                         </div>
                         <div class="stat">
-                            <div class="stat-number">3</div>
-                            <div class="stat-label">Certificaciones</div>
+                            <div class="stat-number" data-i18n="stat-certs">3</div>
+                            <div class="stat-label" data-i18n="stat-certs-label">Certificaciones</div>
                         </div>
                     </div>
                 </div>
@@ -851,20 +852,20 @@
 
     <section class="experience" id="experience">
         <div class="container fade-in-up">
-            <h2 class="section-title">Experiencia <span>Laboral</span></h2>
+            <h2 class="section-title" data-i18n="lbl-experience">Experiencia <span>Laboral</span></h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">Junio 2025 - Presente</div>
-                    <h3 class="timeline-title">Integration Lead / Senior Technical Lead</h3>
-                    <div class="timeline-company">NTT DATA Europe & Latam</div>
+                    <div class="timeline-date" data-i18n="exp1-date">Junio 2025 - Presente</div>
+                    <h3 class="timeline-title" data-i18n="exp1-title">Integration Lead / Senior Technical Lead</h3>
+                    <div class="timeline-company" data-i18n="exp1-company">NTT DATA Europe & Latam</div>
                     <div class="timeline-description">
-                        <p>Actualmente colaboro como Integration Lead en Bci (Banco de Crédito e Inversiones), una de las instituciones financieras más innovadoras de Chile. Mi trabajo diario se centra en el desarrollo de soluciones críticas en Java 17 para la integración de Salesforce con ecosistemas financieros.</p>
+                        <p data-i18n="exp1-desc">Actualmente colaboro como Integration Lead en Bci (Banco de Crédito e Inversiones), una de las instituciones financieras más innovadoras de Chile.</p>
                         <ul>
-                            <li>Desarrollo de microservices en Java 17 para integración con Salesforce CRM</li>
-                            <li>Implementación de soluciones en Microsoft Azure</li>
-                            <li>Validación de código con SonarQube y Checkstyle</li>
-                            <li>Testing de carga con JMeter</li>
-                            <li>Uso de IA (Github Copilot, Google Gemini, MCP) para productividad</li>
+                            <li data-i18n="li-exp1-1">Desarrollo de microservices en Java 17 para integración con Salesforce CRM</li>
+                            <li data-i18n="li-exp1-2">Implementación de soluciones en Microsoft Azure</li>
+                            <li data-i18n="li-exp1-3">Validación de código con SonarQube y Checkstyle</li>
+                            <li data-i18n="li-exp1-4">Testing de carga con JMeter</li>
+                            <li data-i18n="li-exp1-5">Uso de IA (Github Copilot, Google Gemini, MCP) para productividad</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">Java JDK 17</span>
@@ -880,16 +881,16 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-date">Junio 2024 - Febrero 2025</div>
-                    <h3 class="timeline-title">Full Stack Software Engineer</h3>
+                    <div class="timeline-date" data-i18n="exp2-date">Junio 2024 - Febrero 2025</div>
+                    <h3 class="timeline-title" data-i18n="exp2-title">Full Stack Software Engineer</h3>
                     <div class="timeline-company">KDU Ingeniería</div>
                     <div class="timeline-description">
-                        <p>Consultoría en áreas de negocio relacionadas con tecnología de la información para múltiples clientes bajo el modelo de fábrica de software.</p>
+                        <p data-i18n="exp2-desc">Consultoría en áreas de negocio relacionadas con tecnología de la información para múltiples clientes bajo el modelo de fábrica de software.</p>
                         <ul>
-                            <li>Transbank Mandato Digital: Diseño y desarrollo de microservicios en Java 8 con Oracle WebLogic 12c</li>
-                            <li>GVA Andexport: Desarrollo de dashboard para seguimiento de KPI comerciales</li>
-                            <li>Transbank PSP - Gestión Web: Actualización de Web Portlet en Lifteral con Java 8</li>
-                            <li>Transbank - API de Reportes Estratégicos: Integración con Apache Kafka y Schema Registry</li>
+                            <li data-i18n="li-exp2-1">Transbank Mandato Digital: Diseño y desarrollo de microservicios en Java 8 con Oracle WebLogic 12c</li>
+                            <li data-i18n="li-exp2-2">GVA Andexport: Desarrollo de dashboard para seguimiento de KPI comerciales</li>
+                            <li data-i18n="li-exp2-3">Transbank PSP - Gestión Web: Actualización de Web Portlet en Liferay con Java 8</li>
+                            <li data-i18n="li-exp2-4">Transbank - API de Reportes Estratégicos: Integración con Apache Kafka y Schema Registry</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">AWS (EC2, ECS, EKS, RDS)</span>
@@ -904,19 +905,19 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-date">Junio 2022 - Junio 2024</div>
-                    <h3 class="timeline-title">Technical Lead</h3>
-                    <div class="timeline-company">KDU Ingeniería (Transbank)</div>
+                    <div class="timeline-date" data-i18n="exp3-date">Junio 2022 - Junio 2024</div>
+                    <h3 class="timeline-title" data-i18n="exp3-title">Technical Lead</h3>
+                    <div class="timeline-company" data-i18n="exp3-company">KDU Ingeniería (Transbank)</div>
                     <div class="timeline-description">
-                        <p>Tech Lead en Transbank para el proyecto POS Multivendor, líderando proyectos cloud en equipos de alto rendimiento.</p>
+                        <p data-i18n="exp3-desc">Tech Lead en Transbank para el proyecto POS Multivendor, líderando proyectos cloud en equipos de alto rendimiento.</p>
                         <ul>
-                            <li>Liderazgo de proyectos cloud en equipos de alto rendimiento</li>
-                            <li>Análisis de necesidades del negocio y entrega de soluciones</li>
-                            <li>Construcción de arquitecturas y despliegue de proyectos</li>
-                            <li>Coordinación y validación de desarrollos del equipo</li>
-                            <li>Formación de personal técnico</li>
+                            <li data-i18n="li-exp3-1">Liderazgo de proyectos cloud en equipos de alto rendimiento</li>
+                            <li data-i18n="li-exp3-2">Análisis de necesidades del negocio y entrega de soluciones</li>
+                            <li data-i18n="li-exp3-3">Construcción de arquitecturas y despliegue de proyectos</li>
+                            <li data-i18n="li-exp3-4">Coordinación y validación de desarrollos del equipo</li>
+                            <li data-i18n="li-exp3-5">Formación de personal técnico</li>
                         </ul>
-                        <p><strong>Proyecto destacado:</strong> Transbank POS Multivendor - Construcción de infraestructura Cloud AWS para +300,000 dispositivos POS</p>
+                        <p><strong data-i18n="exp3-project-label">Proyecto destacado:</strong> <span data-i18n="exp3-project">Transbank POS Multivendor - Construcción de infraestructura Cloud AWS para +300,000 dispositivos POS</span></p>
                         <div class="tech-tags">
                             <span class="tech-tag">AWS</span>
                             <span class="tech-tag">Java 17</span>
@@ -928,17 +929,17 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-date">Enero 2021 - Junio 2022</div>
-                    <h3 class="timeline-title">Tech Lead / Senior Full Stack Software Engineer</h3>
-                    <div class="timeline-company">MoveApps</div>
+                    <div class="timeline-date" data-i18n="exp4-date">Enero 2021 - Junio 2022</div>
+                    <h3 class="timeline-title" data-i18n="exp4-title">Tech Lead / Senior Full Stack Software Engineer</h3>
+                    <div class="timeline-company" data-i18n="exp4-company">MoveApps</div>
                     <div class="timeline-description">
-                        <p>Liderazgo del Software Factory y desarrollo de arquitecturas cloud-native de alta demanda.</p>
+                        <p data-i18n="exp4-desc">Liderazgo del Software Factory y desarrollo de arquitecturas cloud-native de alta demanda.</p>
                         <ul>
-                            <li>Migración de Framework Node JS de Sails.js a Nest.js</li>
-                            <li>Implementación de Docker Compose para entornos locales</li>
-                            <li>Desarrollo de arquitectura cloud-native para Gamma Leasing</li>
+                            <li data-i18n="li-exp4-1">Migración de Framework Node JS de Sails.js a Nest.js</li>
+                            <li data-i18n="li-exp4-2">Implementación de Docker Compose para entornos locales</li>
+                            <li data-i18n="li-exp4-3">Desarrollo de arquitectura cloud-native para Gamma Leasing</li>
                         </ul>
-                        <p><strong>Proyectos:</strong> ABC Din, AFP UNO, AFP UNO Retiro 10%</p>
+                        <p><strong data-i18n="exp4-projects-label">Proyectos:</strong> <span data-i18n="exp4-projects">ABC Din, AFP UNO, AFP UNO Retiro 10%</span></p>
                         <div class="tech-tags">
                             <span class="tech-tag">Java 8</span>
                             <span class="tech-tag">Node.js/Nest.js</span>
@@ -951,12 +952,12 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-date">Marzo 2018 - Abril 2019</div>
-                    <h3 class="timeline-title">Full Stack Software Engineer</h3>
-                    <div class="timeline-company">KDU Ingeniería</div>
+                    <div class="timeline-date" data-i18n="exp5-date">Marzo 2018 - Abril 2019</div>
+                    <h3 class="timeline-title" data-i18n="exp5-title">Full Stack Software Engineer</h3>
+                    <div class="timeline-company" data-i18n="exp5-company">KDU Ingeniería</div>
                     <div class="timeline-description">
-                        <p>Ingeniero de software full stack usando metodologías ágiles.</p>
-                        <p><strong>Proyecto:</strong> Coopeuch Átomo - Créditos de consumo en terreno</p>
+                        <p data-i18n="exp5-desc">Ingeniero de software full stack usando metodologías ágiles.</p>
+                        <p><strong data-i18n="exp5-project-label">Proyecto:</strong> <span data-i18n="exp5-project">Coopeuch Átomo - Créditos de consumo en terreno</span></p>
                         <div class="tech-tags">
                             <span class="tech-tag">Java 8</span>
                             <span class="tech-tag">Spring Framework</span>
@@ -968,11 +969,11 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-date">Octubre 2017 - Febrero 2018</div>
-                    <h3 class="timeline-title">Full Stack Developer</h3>
-                    <div class="timeline-company">ProCanchas</div>
+                    <div class="timeline-date" data-i18n="exp6-date">Octubre 2017 - Febrero 2018</div>
+                    <h3 class="timeline-title" data-i18n="exp6-title">Full Stack Developer</h3>
+                    <div class="timeline-company" data-i18n="exp6-company">ProCanchas</div>
                     <div class="timeline-description">
-                        <p>Startup de arriendos de canchas de fútbol. Optimización del Backend en Java 8, integración con Transbank Webpay Plus y despliegue en AWS.</p>
+                        <p data-i18n="exp6-desc">Startup de arriendos de canchas de fútbol. Optimización del Backend en Java 8, integración con Transbank Webpay Plus y despliegue en AWS.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">Angular JS</span>
                             <span class="tech-tag">Java 8</span>
@@ -984,12 +985,12 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-date">Julio 2016 - Septiembre 2017</div>
-                    <h3 class="timeline-title">Software Engineer</h3>
-                    <div class="timeline-company">Haibu Solutions</div>
+                    <div class="timeline-date" data-i18n="exp7-date">Julio 2016 - Septiembre 2017</div>
+                    <h3 class="timeline-title" data-i18n="exp7-title">Software Engineer</h3>
+                    <div class="timeline-company" data-i18n="exp7-company">Haibu Solutions</div>
                     <div class="timeline-description">
-                        <p>Desarrollo en Android nativo, Java EE y Angular JS.</p>
-                        <p><strong>Proyectos:</strong> Falabella Connect Android (App punto de venta), Falabella Connect Web</p>
+                        <p data-i18n="exp7-desc">Desarrollo en Android nativo, Java EE y Angular JS.</p>
+                        <p><strong data-i18n="exp7-projects-label">Proyectos:</strong> <span data-i18n="exp7-projects">Falabella Connect Android (App punto de venta), Falabella Connect Web</span></p>
                         <div class="tech-tags">
                             <span class="tech-tag">Android</span>
                             <span class="tech-tag">Java EE</span>
@@ -1003,22 +1004,22 @@
 
     <section class="projects" id="projects">
         <div class="container fade-in-up">
-            <h2 class="section-title">Proyectos <span>Destacados</span></h2>
+            <h2 class="section-title" data-i18n="lbl-projects">Proyectos <span>Destacados</span></h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image-wrapper">
                         <img src="assets/images/projects/project-featured.jpg" alt="AFP UNO" class="project-image">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">AFP UNO Retiro 10%</h3>
-                        <p class="project-description">Sistemas backend de alta concurrencia para el retiro del 10% de fondos de pensiones. Arquitectura y modelado de la solución.</p>
+                        <h3 class="project-title" data-i18n="project-afp-title">AFP UNO</h3>
+                        <p class="project-description" data-i18n="project-afp-desc">Sistemas backend de alta concurrencia para el retiro del 10% de fondos de pensiones. Arquitectura y modelado de la solución.</p>
                         <div class="project-tech">
-                            <span>Java</span>
-                            <span>AWS</span>
-                            <span>Microservices</span>
+                            <span data-i18n="tech-java">Java</span>
+                            <span data-i18n="tech-aws">AWS</span>
+                            <span data-i18n="tech-microservices">Microservices</span>
                         </div>
-                        <a href="https://www.uno.cl/tramite-online/formulario-retiro" target="_blank" class="project-link">
-                            Ver proyecto <i class="fas fa-arrow-right"></i>
+<a href="https://www.uno.cl/tramite-online/formulario-retiro" target="_blank" class="project-link">
+                            <span data-i18n="project-view">Ver proyecto</span> <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -1028,15 +1029,15 @@
                         <img src="assets/images/projects/project-1.png" alt="UNO AFP" class="project-image">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">UNO AFP - Sitio Público y Privado</h3>
-                        <p class="project-description">Sistemas backend, sitio público y privado para el inicio de operaciones en octubre 2019.</p>
+                        <h3 class="project-title" data-i18n="project-uno-title">UNO AFP</h3>
+                        <p class="project-description" data-i18n="project-uno-desc">Creación de sistemas backend, sitio público y privado para el inicio de operaciones en octubre 2019.</p>
                         <div class="project-tech">
                             <span>Java</span>
                             <span>Spring Boot</span>
                             <span>AWS</span>
                         </div>
                         <a href="https://www.uno.cl" target="_blank" class="project-link">
-                            Ver proyecto <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="project-view">Ver proyecto</span> <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -1046,14 +1047,14 @@
                         <img src="assets/images/projects/project-transbank-pos.webp" alt="Transbank POS" class="project-image">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Transbank POS Multivendor</h3>
-                        <p class="project-description">Infraestructura Cloud AWS para administración de +300,000 dispositivos POS en Chile.</p>
+                        <h3 class="project-title" data-i18n="project-pos-title">Transbank POS Multivendor</h3>
+                        <p class="project-description" data-i18n="project-pos-desc">Infraestructura Cloud AWS para administración de +300,000 dispositivos POS en Chile.</p>
                         <div class="project-tech">
                             <span>AWS</span>
                             <span>Docker</span>
                             <span>Kafka</span>
                         </div>
-                        <span class="project-link" style="color: var(--text-muted);">Proyecto interno</span>
+                        <span class="project-link" style="color: var(--text-muted);" data-i18n="project-internal">Proyecto interno</span>
                     </div>
                 </div>
 
@@ -1062,15 +1063,15 @@
                         <img src="https://athleticmelipilla.cl/logo.png" alt="Melipilla Athletic Club" class="project-image" style="object-fit: contain; background: #f8f9fa;">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Melipilla Athletic Club</h3>
-                        <p class="project-description">Sitio web para club de rugby con Next.js, Neon (PostgreSQL) y Mercado Pago.</p>
+                        <h3 class="project-title" data-i18n="project-meli-title">Melipilla Athletic Club</h3>
+                        <p class="project-description" data-i18n="project-meli-desc">Sitio web para club de rugby con Next.js, Neon (PostgreSQL) y Mercado Pago.</p>
                         <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Neon</span>
-                            <span>MercadoPago</span>
+                            <span data-i18n="project-meli-tech1">Next.js</span>
+                            <span data-i18n="project-meli-tech2">Neon</span>
+                            <span data-i18n="project-meli-tech3">MercadoPago</span>
                         </div>
                         <a href="https://athleticmelipilla.cl/" target="_blank" class="project-link">
-                            Ver proyecto <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="project-view">Ver proyecto</span> <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -1096,12 +1097,12 @@
 
     <section class="skills" id="skills">
         <div class="container fade-in-up">
-            <h2 class="section-title">Skills <span>Técnicos</span></h2>
+            <h2 class="section-title" data-i18n="lbl-skills">Skills <span>Técnicos</span></h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-name">
-                        <i class="fab fa-java"></i> Java & Spring
-                        <span class="skill-level">Experto</span>
+                        <i class="fab fa-java"></i> <span data-i18n="skill-java">Java & Spring</span>
+                        <span class="skill-level" data-i18n="skill-expert">Experto</span>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 95%"></div>
@@ -1111,7 +1112,7 @@
                 <div class="skill-card">
                     <div class="skill-name">
                         <i class="fab fa-aws"></i> AWS
-                        <span class="skill-level">Avanzado</span>
+                        <span class="skill-level" data-i18n="skill-advanced">Avanzado</span>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 85%"></div>
@@ -1121,7 +1122,7 @@
                 <div class="skill-card">
                     <div class="skill-name">
                         <i class="fab fa-docker"></i> Docker & K8s
-                        <span class="skill-level">Avanzado</span>
+                        <span class="skill-level" data-i18n="skill-advanced">Avanzado</span>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 80%"></div>
@@ -1131,7 +1132,7 @@
                 <div class="skill-card">
                     <div class="skill-name">
                         <i class="fas fa-cubes"></i> Microservices
-                        <span class="skill-level">Experto</span>
+                        <span class="skill-level" data-i18n="skill-expert">Experto</span>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 90%"></div>
@@ -1141,7 +1142,7 @@
                 <div class="skill-card">
                     <div class="skill-name">
                         <i class="fab fa-node-js"></i> Node.js & Nest
-                        <span class="skill-level">Avanzado</span>
+                        <span class="skill-level" data-i18n="skill-advanced">Avanzado</span>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 75%"></div>
@@ -1151,7 +1152,7 @@
                 <div class="skill-card">
                     <div class="skill-name">
                         <i class="fab fa-angular"></i> Angular
-                        <span class="skill-level">Medio</span>
+                        <span class="skill-level" data-i18n="skill-medium">Medio</span>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 65%"></div>
@@ -1161,7 +1162,7 @@
                 <div class="skill-card">
                     <div class="skill-name">
                         <i class="fab fa-react"></i> React
-                        <span class="skill-level">Básico</span>
+                        <span class="skill-level" data-i18n="skill-basic">Básico</span>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 40%"></div>
@@ -1171,7 +1172,7 @@
                 <div class="skill-card">
                     <div class="skill-name">
                         <i class="fas fa-cloud"></i> Salesforce
-                        <span class="skill-level">Medio</span>
+                        <span class="skill-level" data-i18n="skill-medium">Medio</span>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 60%"></div>
@@ -1181,7 +1182,7 @@
                 <div class="skill-card">
                     <div class="skill-name">
                         <i class="fas fa-cubes-stacked"></i> Terraform
-                        <span class="skill-level">Avanzado</span>
+                        <span class="skill-level" data-i18n="skill-advanced">Avanzado</span>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 75%"></div>
@@ -1191,7 +1192,7 @@
                 <div class="skill-card">
                     <div class="skill-name">
                         <i class="fas fa-robot"></i> IA / AI
-                        <span class="skill-level">Aprendiendo</span>
+                        <span class="skill-level" data-i18n="skill-learning">Aprendiendo</span>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 50%"></div>
@@ -1203,7 +1204,7 @@
 
     <section class="education" id="education">
         <div class="container fade-in-up">
-            <h2 class="section-title"><span>Educación</span></h2>
+            <h2 class="section-title" data-i18n="lbl-education"><span>Educación</span></h2>
             <div class="education-grid">
                 <div class="education-card">
                     <h3 class="education-title">Ingeniería en Informática</h3>
@@ -1224,7 +1225,7 @@
                 </div>
             </div>
 
-            <h2 class="section-title" style="margin-top: 3rem;">Idiomas</h2>
+            <h2 class="section-title" style="margin-top: 3rem;" data-i18n="lbl-languages">Idiomas</h2>
             <div class="languages-list">
                 <div class="language-item">
                     <span class="language-name">Español</span>
@@ -1250,7 +1251,7 @@
                 </div>
             </div>
 
-            <h2 class="section-title" style="margin-top: 3rem;">Certificaciones</h2>
+            <h2 class="section-title" style="margin-top: 3rem;" data-i18n="lbl-certifications">Certificaciones</h2>
             <div class="education-grid">
                 <div class="education-card">
                     <h3 class="education-title">AWS Certified Cloud Practitioner</h3>
@@ -1281,7 +1282,7 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
-            <p>&copy; 2025 Franco Sebastian Arraño Silva. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Franco Sebastian Arraño Silva. <span data-i18n="footer-copyright">Todos los derechos reservados.</span></p>
         </div>
     </footer>
 
@@ -1307,6 +1308,300 @@
             localStorage.setItem('theme', newTheme);
         });
 
+        // Simplified translations - replaces all i18n elements
+        const translations = {
+            es: {
+                "nav-about": "Sobre mí",
+                "nav-experience": "Experiencia",
+                "nav-projects": "Proyectos",
+                "nav-skills": "Skills",
+                "nav-education": "Educación",
+                "lbl-about": "Sobre mí",
+                "lbl-experience": "Experiencia Laboral",
+                "lbl-projects": "Proyectos Destacados",
+                "lbl-skills": "Skills Técnicos",
+                "lbl-education": "Educación",
+                "lbl-languages": "Idiomas",
+                "lbl-certifications": "Certificaciones",
+                "about-text-1": "Soy un profesional de TI con una trayectoria enfocada en el desarrollo de software empresarial de alta calidad. A lo largo de mi carrera he trabajado en diversos sectores incluyendo fintech, retail y salud, siempre buscando entregar soluciones que generen valor real al negocio.",
+                "about-text-2": "Me caracteriza mi capacidad de adaptación a nuevas tecnologías, proactividad y facilidad para el análisis de procesos de negocio. Tengo experiencia liderando equipos técnicos y trabajando en metodologías ágiles.",
+                "about-text-3": "Especialidades: Java EE, Amazon Web Services, Docker, Kubernetes, Salesforce Integration, IA",
+                "stat-years-label": "Años de experiencia",
+                "stat-projects-label": "Proyectos en producción",
+                "stat-certs-label": "Certificaciones",
+                "lang-es": "Español",
+                "lang-en": "Inglés",
+                "lang-native": "Nativo",
+                "lang-advanced": "Avanzado (TOEIC)",
+                "cert-aws": "AWS Certified Cloud Practitioner",
+                "cert-aws-org": "Amazon Web Services (AWS)",
+                "cert-date": "Expedición: Ago. 2021",
+                "footer-copyright": "Todos los derechos reservados.",
+                "hero-subtitle": "Senior Full Stack Software Engineer",
+                "hero-desc": "Ingeniero en informática con más de 9 años de experiencia en el desarrollo de soluciones tecnológicas de alta escala. Especializado en arquitecturas cloud-native, microservicios y Java Enterprise. Actualmente enfocándome en integración con Inteligencia Artificial.",
+                "btn-contact": "Contactar",
+"project-view": "Ver proyecto",
+                "project-internal": "Proyecto interno",
+                "project-dev": "En desarrollo",
+                // Project translations
+                "project-afp-title": "AFP UNO",
+                "project-afp-desc": "Sistemas backend de alta concurrencia para el retiro del 10% de fondos de pensiones. Arquitectura y modelado de la solución.",
+                "project-uno-title": "UNO AFP",
+                "project-uno-desc": "Creación de sistemas backend, sitio público y privado para el inicio de operaciones en octubre 2019.",
+                "project-pos-title": "Transbank POS Multivendor",
+                "project-pos-desc": "Infraestructura Cloud AWS para administración de +300,000 dispositivos POS en Chile.",
+                "project-meli-title": "Melipilla Athletic Club",
+                "project-meli-desc": "Sitio web para club de rugby con Next.js, Neon (PostgreSQL) y Mercado Pago.",
+                "project-san-title": "Santo Pan",
+                "project-san-desc": "E-commerce para panadería artesanal con Next.js, PostgreSQL y Docker.",
+                "project-meli-tech1": "Next.js",
+                "project-meli-tech2": "Neon",
+                "project-meli-tech3": "MercadoPago",
+                "project-san-tech1": "Next.js",
+                "project-san-tech2": "PostgreSQL",
+                "project-san-tech3": "Docker",
+                "tech-aws": "AWS",
+                "tech-docker": "Docker",
+                "tech-kafka": "Kafka",
+                "tech-java": "Java",
+                "tech-aws": "AWS",
+                "tech-microservices": "Microservices",
+                // Experience translations ES
+                "exp1-date": "Junio 2025 - Presente",
+                "exp1-title": "Integration Lead / Senior Technical Lead",
+                "exp1-company": "NTT DATA Europe & Latam",
+                "exp1-desc": "Actualmente colaboro como Integration Lead en Bci (Banco de Crédito e Inversiones), una de las instituciones financieras más innovadoras de Chile.",
+                "li-exp1-1": "Desarrollo de microservices en Java 17 para integración con Salesforce CRM",
+                "li-exp1-2": "Implementación de soluciones en Microsoft Azure",
+                "li-exp1-3": "Validación de código con SonarQube y Checkstyle",
+                "li-exp1-4": "Testing de carga con JMeter",
+                "li-exp1-5": "Uso de IA (Github Copilot, Google Gemini, MCP) para productividad",
+                "exp2-date": "Junio 2024 - Febrero 2025",
+                "exp2-title": "Full Stack Software Engineer",
+                "exp2-desc": "Consultoría en áreas de negocio relacionadas con tecnología de la información para múltiples clientes bajo el modelo de fábrica de software.",
+                "li-exp2-1": "Transbank Mandato Digital: Diseño y desarrollo de microservicios en Java 8 con Oracle WebLogic 12c",
+                "li-exp2-2": "GVA Andexport: Desarrollo de dashboard para seguimiento de KPI comerciales",
+                "li-exp2-3": "Transbank PSP - Gestión Web: Actualización de Web Portlet en Liferay con Java 8",
+                "li-exp2-4": "Transbank - API de Reportes Estratégicos: Integración con Apache Kafka y Schema Registry",
+                "exp3-date": "Junio 2022 - Junio 2024",
+                "exp3-title": "Technical Lead",
+                "exp3-company": "KDU Ingeniería (Transbank)",
+                "exp3-desc": "Tech Lead en Transbank para el proyecto POS Multivendor, líderando proyectos cloud en equipos de alto rendimiento.",
+                "li-exp3-1": "Liderazgo de proyectos cloud en equipos de alto rendimiento",
+                "li-exp3-2": "Análisis de necesidades del negocio y entrega de soluciones",
+                "li-exp3-3": "Construcción de arquitecturas y despliegue de proyectos",
+                "li-exp3-4": "Coordinación y validación de desarrollos del equipo",
+                "li-exp3-5": "Formación de personal técnico",
+                "exp3-project-label": "Proyecto destacado:",
+                "exp3-project": "Transbank POS Multivendor - Construcción de infraestructura Cloud AWS para +300,000 dispositivos POS",
+                "exp4-date": "Enero 2021 - Junio 2022",
+                "exp4-title": "Tech Lead / Senior Full Stack Software Engineer",
+                "exp4-company": "MoveApps",
+                "exp4-desc": "Liderazgo del Software Factory y desarrollo de arquitecturas cloud-native de alta demanda.",
+                "li-exp4-1": "Migración de Framework Node JS de Sails.js a Nest.js",
+                "li-exp4-2": "Implementación de Docker Compose para entornos locales",
+                "li-exp4-3": "Desarrollo de arquitectura cloud-native para Gamma Leasing",
+                "exp4-projects-label": "Proyectos:",
+                "exp4-projects": "ABC Din, AFP UNO, AFP UNO Retiro 10%",
+                "exp5-date": "Marzo 2018 - Abril 2019",
+                "exp5-title": "Full Stack Software Engineer",
+                "exp5-company": "KDU Ingeniería",
+                "exp5-desc": "Ingeniero de software full stack usando metodologías ágiles.",
+                "exp5-project-label": "Proyecto:",
+                "exp5-project": "Coopeuch Átomo - Créditos de consumo en terreno",
+                "exp6-date": "Octubre 2017 - Febrero 2018",
+                "exp6-title": "Full Stack Developer",
+                "exp6-company": "ProCanchas",
+                "exp6-desc": "Startup de arriendos de canchas de fútbol. Optimización del Backend en Java 8, integración con Transbank Webpay Plus y despliegue en AWS.",
+                "exp7-date": "Julio 2016 - Septiembre 2017",
+                "exp7-title": "Software Engineer",
+                "exp7-company": "Haibu Solutions",
+                "exp7-desc": "Desarrollo en Android nativo, Java EE y Angular JS.",
+                "exp7-projects-label": "Proyectos:",
+                "exp7-projects": "Falabella Connect Android (App punto de venta), Falabella Connect Web"
+            },
+            en: {
+                "nav-about": "About",
+                "nav-experience": "Experience",
+                "nav-projects": "Projects",
+                "nav-skills": "Skills",
+                "nav-education": "Education",
+                "lbl-about": "About Me",
+                "lbl-experience": "Work Experience",
+                "lbl-projects": "Featured Projects",
+                "lbl-skills": "Technical Skills",
+                "lbl-education": "Education",
+                "lbl-languages": "Languages",
+                "lbl-certifications": "Certifications",
+                "about-text-1": "I am an IT professional focused on developing high-quality enterprise software. Throughout my career, I have worked in various sectors including fintech, retail, and healthcare, always seeking to deliver solutions that generate real business value.",
+                "about-text-2": "I am characterized by my ability to adapt to new technologies, proactivity, and ease in analyzing business processes. I have experience leading technical teams and working in agile methodologies.",
+                "about-text-3": "Specialties: Java EE, Amazon Web Services, Docker, Kubernetes, Salesforce Integration, AI",
+                "stat-years-label": "Years of experience",
+                "stat-projects-label": "Projects in production",
+                "stat-certs-label": "Certifications",
+                "lang-es": "Spanish",
+                "lang-en": "English",
+                "lang-native": "Native",
+                "lang-advanced": "Advanced (TOEIC)",
+                // Skills labels
+                "skill-java": "Java & Spring",
+                "skill-aws": "AWS",
+                "skill-docker": "Docker & K8s",
+                "skill-microservices": "Microservices",
+                "skill-node": "Node.js & Nest",
+                "skill-angular": "Angular",
+                "skill-react": "React",
+                "skill-salesforce": "Salesforce",
+                "skill-terraform": "Terraform",
+                "skill-ia": "AI",
+                "skill-expert": "Expert",
+                "skill-advanced": "Advanced",
+                "skill-medium": "Medium",
+                "skill-basic": "Basic",
+                "skill-learning": "Learning",
+                // Education
+                "edu-title-1": "Computer Engineering",
+                "edu-school-1": "DUOC UC",
+                "edu-title-2": "Mobile App Development",
+                "edu-school-2": "Monterrey Tech",
+                "edu-title-3": "Computer Programmer",
+                "edu-school-3": "DUOC UC",
+                // Skills labels
+                "skill-java": "Java & Spring",
+                "skill-aws": "AWS",
+                "skill-docker": "Docker & K8s",
+                "skill-microservices": "Microservices",
+                "skill-node": "Node.js & Nest",
+                "skill-angular": "Angular",
+                "skill-react": "React",
+                "skill-salesforce": "Salesforce",
+                "skill-terraform": "Terraform",
+                "skill-ia": "IA / AI",
+                "skill-expert": "Experto",
+                "skill-advanced": "Avanzado",
+                "skill-medium": "Medio",
+                "skill-basic": "Básico",
+                "skill-learning": "Aprendiendo",
+                // Education
+                "edu-title-1": "Ingeniería en Informática",
+                "edu-school-1": "DUOC UC",
+                "edu-title-2": "Desarrollo de aplicaciones móviles IOS y Android",
+                "edu-school-2": "Tecnológico de Monterrey",
+                "edu-title-3": "Analista Programador Computacional",
+                "edu-school-3": "DUOC UC",
+                "cert-aws": "AWS Certified Cloud Practitioner",
+                "cert-aws-org": "Amazon Web Services (AWS)",
+                "cert-date": "Issued: Aug. 2021",
+                "footer-copyright": "All rights reserved.",
+                "hero-subtitle": "Senior Full Stack Software Engineer",
+                "hero-desc": "Computer engineer with more than 9 years of experience developing high-scale technological solutions. Specialized in cloud-native architectures, microservices, and Java Enterprise. Currently focusing on AI integration.",
+                "btn-contact": "Contact",
+                "project-view": "View project",
+                "project-internal": "Internal project",
+                "project-dev": "In development",
+                // Project translations
+                "project-afp-title": "AFP UNO",
+                "project-afp-desc": "High-concurrency backend systems for the 10% pension withdrawal. Architecture and modeling of the solution.",
+                "project-uno-title": "UNO AFP",
+                "project-uno-desc": "Backend systems, public and private website for operations start in October 2019.",
+                "project-pos-title": "Transbank POS Multivendor",
+                "project-pos-desc": "AWS Cloud infrastructure for managing +300,000 POS devices in Chile.",
+                "project-meli-title": "Melipilla Athletic Club",
+                "project-meli-desc": "Website for rugby club with Next.js, Neon (PostgreSQL) and Mercado Pago.",
+                "project-san-title": "Santo Pan",
+                "project-san-desc": "E-commerce for artisan bakery with Next.js, PostgreSQL and Docker.",
+                "project-meli-tech1": "Next.js",
+                "project-meli-tech2": "Neon",
+                "project-meli-tech3": "MercadoPago",
+                "project-san-tech1": "Next.js",
+                "project-san-tech2": "PostgreSQL",
+                "project-san-tech3": "Docker",
+                "tech-aws": "AWS",
+                "tech-docker": "Docker",
+                "tech-kafka": "Kafka",
+                // Experiences
+                "tech-java": "Java",
+                "tech-aws": "AWS",
+                "tech-microservices": "Microservices",
+                // All experience translations
+                "exp1-date": "June 2025 - Present",
+                "exp1-title": "Integration Lead / Senior Technical Lead",
+                "exp1-company": "NTT DATA Europe & Latam",
+                "exp1-desc": "Currently working as Integration Lead at Bci (Banco de Crédito e Inversiones), one of the most innovative financial institutions in Chile.",
+                "li-exp1-1": "Development of microservices in Java 17 for Salesforce CRM integration",
+                "li-exp1-2": "Implementation of solutions in Microsoft Azure",
+                "li-exp1-3": "Code validation with SonarQube and Checkstyle",
+                "li-exp1-4": "Load testing with JMeter",
+                "li-exp1-5": "Use of AI (Github Copilot, Google Gemini, MCP) for productivity",
+                "exp2-date": "June 2024 - February 2025",
+                "exp2-title": "Full Stack Software Engineer",
+                "exp2-desc": "Consulting in IT business areas for multiple clients under the software factory model.",
+                "li-exp2-1": "Transbank Mandato Digital: Design and development of microservices in Java 8 with Oracle WebLogic 12c",
+                "li-exp2-2": "GVA Andexport: Dashboard development for commercial KPI tracking",
+                "li-exp2-3": "Transbank PSP - Web Management: Web Portlet update in Liferay with Java 8",
+                "li-exp2-4": "Transbank - Strategic Reports API: Integration with Apache Kafka and Schema Registry",
+                "exp3-date": "June 2022 - June 2024",
+                "exp3-title": "Technical Lead",
+                "exp3-company": "KDU Ingeniería (Transbank)",
+                "exp3-desc": "Tech Lead at Transbank for the POS Multivendor project, leading cloud projects in high-performance teams.",
+                "li-exp3-1": "Cloud project leadership in high-performance teams",
+                "li-exp3-2": "Business needs analysis and solution delivery",
+                "li-exp3-3": "Architecture construction and project deployment",
+                "li-exp3-4": "Team development coordination and validation",
+                "li-exp3-5": "Technical staff training",
+                "exp3-project-label": "Featured project:",
+                "exp3-project": "Transbank POS Multivendor - AWS Cloud infrastructure for +300,000 POS devices",
+                "exp4-date": "January 2021 - June 2022",
+                "exp4-title": "Tech Lead / Senior Full Stack Software Engineer",
+                "exp4-company": "MoveApps",
+                "exp4-desc": "Software Factory leadership and development of high-demand cloud-native architectures.",
+                "li-exp4-1": "Node JS Framework migration from Sails.js to Nest.js",
+                "li-exp4-2": "Docker Compose implementation for local environments",
+                "li-exp4-3": "Cloud-native architecture development for Gamma Leasing",
+                "exp4-projects-label": "Projects:",
+                "exp4-projects": "ABC Din, AFP UNO, AFP UNO 10% Withdrawal",
+                "exp5-date": "March 2018 - April 2019",
+                "exp5-title": "Full Stack Software Engineer",
+                "exp5-company": "KDU Ingeniería",
+                "exp5-desc": "Full stack software engineer using agile methodologies.",
+                "exp5-project-label": "Project:",
+                "exp5-project": "Coopeuch Átomo - Consumer credit on-site",
+                "exp6-date": "October 2017 - February 2018",
+                "exp6-title": "Full Stack Developer",
+                "exp6-company": "ProCanchas",
+                "exp6-desc": "Football field rental startup. Backend optimization in Java 8, integration with Transbank Webpay Plus and AWS deployment.",
+                "exp7-date": "July 2016 - September 2017",
+                "exp7-title": "Software Engineer",
+                "exp7-company": "Haibu Solutions",
+                "exp7-desc": "Development in native Android, Java EE and Angular JS.",
+                "exp7-projects-label": "Projects:",
+                "exp7-projects": "Falabella Connect Android (POS App), Falabella Connect Web"
+            }
+        };
+        const langFlag = document.getElementById('langFlag');
+        let currentLang = localStorage.getItem('lang') || 'es';
+
+        function applyTranslations() {
+            const t = translations[currentLang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(t[key]) el.textContent = t[key];
+            });
+            langFlag.textContent = currentLang === 'es' ? '🇪🇸 ESP' : '🇬🇧 ENG';
+        }
+
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            applyTranslations();
+            localStorage.setItem('lang', currentLang);
+        });
+
+        if (localStorage.getItem('lang')) {
+            currentLang = localStorage.getItem('lang');
+            applyTranslations();
+        }
+
+        // Theme toggle
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             html.setAttribute('data-theme', savedTheme);
