@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-        :root {
+:root {
             --bg-primary: #ffffff;
             --bg-secondary: #f8f9fa;
             --bg-card: #ffffff;
@@ -37,6 +38,21 @@
             --border: #2d2d2d;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --bg-card: #1a1a1a;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --accent: #60a5fa;
+            --accent-hover: #3b82f6;
+            --border: #2d2d2d;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+            --hero-gradient: linear-gradient(135deg, #1e3a5f 0%, #0f0f0f 50%, #1a1a2e 100%);
         }
 
         * {
@@ -136,30 +152,31 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-text h1 {
             font-size: 3rem;
             font-weight: 700;
-            line-height: 1.2;
+            line-height: 1.1;
             margin-bottom: 1rem;
-        }
-
-        .hero-text h1 span {
-            color: var(--accent);
+            color: var(--text-primary);
         }
 
         .hero-text .subtitle {
             font-size: 1.25rem;
-            color: var(--accent);
-            font-weight: 500;
+            color: var(--text-primary);
+            font-weight: 600;
             margin-bottom: 1.5rem;
+            opacity: 0.9;
         }
 
         .hero-text p {
             color: var(--text-secondary);
             margin-bottom: 2rem;
             font-size: 1.05rem;
+            max-width: 500px;
         }
 
         .hero-buttons {
@@ -455,6 +472,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-name i {
+            color: var(--accent);
+            font-size: 1.1rem;
         }
 
         .skill-level {
@@ -635,7 +658,7 @@
 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content animate__animated animate__fadeInUp">
                 <div class="hero-text">
                     <h1><span>Franco Sebastian Arraño Silva</span></h1>
                     <p class="subtitle">Senior Full Stack Software Engineer</p>
@@ -667,7 +690,7 @@
     </section>
 
     <section class="about" id="about">
-        <div class="container">
+        <div class="container animate__animated animate__fadeIn">
             <h2 class="section-title">Sobre <span>mí</span></h2>
             <div class="about-grid">
                 <div class="about-content">
@@ -942,7 +965,7 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-name">
-                        Java & Spring Framework
+                        <i class="fab fa-java"></i> Java & Spring
                         <span class="skill-level">Experto</span>
                     </div>
                     <div class="skill-bar">
@@ -952,7 +975,7 @@
 
                 <div class="skill-card">
                     <div class="skill-name">
-                        Amazon Web Services
+                        <i class="fab fa-aws"></i> AWS
                         <span class="skill-level">Avanzado</span>
                     </div>
                     <div class="skill-bar">
@@ -962,7 +985,7 @@
 
                 <div class="skill-card">
                     <div class="skill-name">
-                        Docker & Kubernetes
+                        <i class="fab fa-docker"></i> Docker & K8s
                         <span class="skill-level">Avanzado</span>
                     </div>
                     <div class="skill-bar">
@@ -972,7 +995,7 @@
 
                 <div class="skill-card">
                     <div class="skill-name">
-                        Microservices Architecture
+                        <i class="fas fa-cubes"></i> Microservices
                         <span class="skill-level">Experto</span>
                     </div>
                     <div class="skill-bar">
@@ -982,7 +1005,7 @@
 
                 <div class="skill-card">
                     <div class="skill-name">
-                        Node.js & Nest.js
+                        <i class="fab fa-node-js"></i> Node.js & Nest
                         <span class="skill-level">Avanzado</span>
                     </div>
                     <div class="skill-bar">
@@ -992,7 +1015,7 @@
 
                 <div class="skill-card">
                     <div class="skill-name">
-                        Angular
+                        <i class="fab fa-angular"></i> Angular
                         <span class="skill-level">Medio</span>
                     </div>
                     <div class="skill-bar">
@@ -1002,7 +1025,7 @@
 
                 <div class="skill-card">
                     <div class="skill-name">
-                        React
+                        <i class="fab fa-react"></i> React
                         <span class="skill-level">Básico</span>
                     </div>
                     <div class="skill-bar">
@@ -1012,7 +1035,7 @@
 
                 <div class="skill-card">
                     <div class="skill-name">
-                        Salesforce CRM
+                        <i class="fas fa-cloud"></i> Salesforce
                         <span class="skill-level">Medio</span>
                     </div>
                     <div class="skill-bar">
@@ -1022,7 +1045,7 @@
 
                 <div class="skill-card">
                     <div class="skill-name">
-                        Terraform
+                        <i class="fas fa-cubes-stacked"></i> Terraform
                         <span class="skill-level">Avanzado</span>
                     </div>
                     <div class="skill-bar">
@@ -1032,7 +1055,7 @@
 
                 <div class="skill-card">
                     <div class="skill-name">
-                        Inteligencia Artificial
+                        <i class="fas fa-robot"></i> IA / AI
                         <span class="skill-level">Aprendiendo</span>
                     </div>
                     <div class="skill-bar">
