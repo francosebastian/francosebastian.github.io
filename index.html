@@ -1,705 +1,1158 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Franco Sebastian Arraño Silva Portfolio/Resume</title>
-    <!-- Meta -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Franco Sebastian Arraño Silva Portfolio/Resume"
-    />
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media" />
-    <link rel="shortcut icon" href="favicon.ico" />
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco Sebastian Arraño Silva | Senior Full Stack Software Engineer</title>
+    <meta name="description" content="Portfolio de Franco Sebastian Arraño Silva - Senior Full Stack Software Engineer">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-card: #ffffff;
+            --text-primary: #1a1a2e;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --border: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
+        [data-theme="dark"] {
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --bg-card: #1a1a1a;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --accent: #60a5fa;
+            --accent-hover: #3b82f6;
+            --border: #2d2d2d;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+        }
 
-    <!-- FontAwesome JS -->
-    <script defer src="assets/fontawesome/js/all.js"></script>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Global CSS -->
-    <link
-      rel="stylesheet"
-      href="assets/plugins/bootstrap/css/bootstrap.min.css"
-    />
+        html {
+            scroll-behavior: smooth;
+        }
 
-    <!-- github calendar css -->
-    <link
-      rel="stylesheet"
-      href="assets/plugins/github-calendar/dist/github-calendar.css"
-    />
-    <!-- github activity css -->
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/plugins/github-activity/github-activity-0.1.5.min.css"
-    />
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css" />
-  </head>
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-  <body>
-    <!-- ******HEADER****** -->
-    <header class="header">
-      <div class="container clearfix">
-        <img
-          class="profile-image img-fluid float-left rounded-circle"
-          src="assets/images/profile.png"
-          alt="profile image"
-        />
-        <div class="profile-content float-left">
-          <h1 class="name">Franco Sebastian Arraño Silva</h1>
-          <h2 class="desc">Tech Lead - Senior Full Stack Software Engineer</h2>
-          <ul class="social list-inline">
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/francosebastianarrano/"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </li>
-            <li class="list-inline-item last-item">
-              <a href="https://github.com/francosebastian"
-                ><i class="fab fa-github-alt"></i
-              ></a>
-            </li>
-          </ul>
+        /* Header / Nav */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--border);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text h1 span {
+            color: var(--accent);
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 320px;
+            height: 320px;
+            border-radius: 24px;
+            object-fit: cover;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+        }
+
+        .section-title span {
+            color: var(--accent);
+        }
+
+        /* About */
+        .about {
+            background: var(--bg-secondary);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .about-content .highlight {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .info-list li i {
+            width: 20px;
+            color: var(--accent);
+        }
+
+        .info-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .info-list a:hover {
+            color: var(--accent);
+        }
+
+        /* Experience */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid var(--bg-primary);
+        }
+
+        .timeline-date {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-company {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+        }
+
+        .timeline-description ul {
+            margin-top: 1rem;
+            padding-left: 1.25rem;
+            color: var(--text-secondary);
+        }
+
+        .timeline-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 0.375rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .skill-card:hover {
+            border-color: var(--accent);
+        }
+
+        .skill-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .skill-level {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .skill-bar {
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        /* Education */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .education-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .education-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .education-school {
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-year {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Languages */
+        .languages-list {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .language-name {
+            font-weight: 500;
+        }
+
+        .language-level {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .stars {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-image img {
+                width: 240px;
+                height: 240px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .languages-list {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Franco Arraño</a>
+                <ul class="nav-links">
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#experience">Experiencia</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Educación</a></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <!--//profile-->
-        <a
-          class="btn btn-cta-primary float-right"
-          href="mailto:farranos@emeal.nttdata.com"
-          target="_blank"
-          ><i class="fas fa-paper-plane"></i> Contáctame</a
-        >
-      </div>
-      <!--//container-->
     </header>
-    <!--//header-->
 
-    <div class="container sections-wrapper">
-      <div class="row">
-        <div class="primary col-lg-8 col-12">
-          <section class="about section">
-            <div class="section-inner shadow-sm rounded">
-              <h2 class="heading">Acerca de</h2>
-              <div class="content">
-                <p>
-                  Ingeniero en informática, además cuenta con el título de
-                  Analista Programador Computacional obteniendo el mejor
-                  rendimiento de su promoción, ha cursado sus años de estudios
-                  con gran éxito, destacándose por sus habilidades dentro del
-                  área, a pesar de ser muy joven ha adquirido gran experiencia
-                  en la industria en distintos sectores del ámbito privado y
-                  público, también cuenta con estudios de especialización en el
-                  extranjero en el área de tecnologías móviles. Alto dominio de
-                  la programación orientada a objetos en distintas plataformas y
-                  lenguajes.
-                </p>
-                <p>
-                  Características : Gran nivel de adaptación al cambio en nuevas
-                  tecnologías y herramientas, pro-actividad, facilidad el
-                  análisis de los procesos de negocio, excelentes habilidades
-                  sociales y comunicacionales, capacidad para liderar equipos de
-                  trabajo con éxito, habilidades de auto aprendizaje,
-                  competencias certificadas en el idioma Inglés.
-                </p>
-                <p>Especialidades: Java EE, Amazon Web Services y Docker</p>
-                <p>
-                  Actualmente se encuentra perfeccionando sus conocimientos en
-                  Cloud Computing y Tecnología de contenedores
-                </p>
-              </div>
-              <!--//content-->
-            </div>
-            <!--//section-inner-->
-          </section>
-          <!--//section-->
-
-          <section class="latest section">
-            <div class="section-inner shadow-sm rounded">
-              <h2 class="heading">Proyectos</h2>
-              <div class="content">
-                <div class="item featured text-center">
-                  <div class="featured-image has-ribbon">
-                    <a
-                      href="https://www.uno.cl/tramite-online/formulario-retiro"
-                      target="_blank"
-                    >
-                      <img
-                        class="img-fluid project-image rounded shadow-sm"
-                        src="assets/images/projects/project-featured.jpg"
-                        alt="project name"
-                      />
-                    </a>
-                    <div class="ribbon">
-                      <div class="text">Nuevo</div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1><span>Franco Sebastian Arraño Silva</span></h1>
+                    <p class="subtitle">Senior Full Stack Software Engineer</p>
+                    <p>
+                        Ingeniero en informática con más de 9 años de experiencia en el desarrollo de soluciones tecnológicas de alta escala. 
+                        Especializado en arquitecturas cloud-native, microservicios y Java Enterprise. 
+                        Actualmente enfocándome en integración con Inteligencia Artificial.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Contactar
+                        </a>
+                        <a href="https://github.com/francosebastian" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/francosebastianarrano/" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
                     </div>
-                  </div>
-
-                  <h3 class="title mb-3">
-                    <a
-                      href="https://www.uno.cl/tramite-online/formulario-retiro"
-                      target="_blank"
-                      >UNO AFP Retiro 10% fondo de pensiones </a
-                    >
-                  </h3>
-
-                  <div class="desc text-left">
-                    <p>
-                        Creación de sistemas backend de alta concurrencia, arquitectura y modelado de la solución.
-                        Desarrollo técnico que permite hoy a los afiliados de UNO AFP hacer el retiro de su 10%.
-                    </p>
-                  </div>
-                  <!--//desc-->
                 </div>
-                <!--//item-->
-                <hr class="divider" />
-                <div class="item row">
-                  <a
-                    class="col-md-4 col-12"
-                    href="https://www.uno.cl"
-                    target="_blank"
-                  >
-                    <img
-                      class="img-fluid project-image rounded shadow-sm"
-                      src="assets/images/projects/project-1.png"
-                      alt="project name"
-                    />
-                  </a>
-                  <div class="desc col-md-8 col-12">
-                    <h3 class="title">
-                      <a
-                        href="https://www.uno.cl"
-                        target="_blank"
-                        >UNO AFP - Sitio Publico y Privado</a
-                      >
-                    </h3>
-                    <p class="mb-2">
-                        Creación de sistemas backend, sitio publico y privado para el inicio de operaciones en octubre de 2019.
-                    </p>
-                    <p>
-                      <a
-                        class="more-link"
-                        href="https://www.uno.cl"
-                        target="_blank"
-                        ><i class="fas fa-external-link-alt"></i>Ver más</a
-                      >
-                    </p>
-                  </div>
-                  <!--//desc-->
+                <div class="hero-image">
+                    <img src="assets/images/profile.png" alt="Franco Sebastian Arraño Silva">
                 </div>
-                <!--//item-->
-              </div>
-              <!--//content-->
             </div>
-            <!--//section-inner-->
-          </section>
-          <!--//section-->
-
-          <section class="experience section">
-            <div class="section-inner shadow-sm rounded">
-              <h2 class="heading">Experiencia Laboral</h2>
-              <div class="content">
-                <div class="item">
-                  <h3 class="title">
-                    Technical Service Leader
-                    <span class="place"><a href="https://cl.nttdata.com">NTT Data</a></span>
-                    <span class="year">(2025 - Actualidad)</span>
-                  </h3>
-                  <p>
-                    Desempeño el cargo de Technical Service Leader en BCI.<br/>
-                  </p>
-                </div>
-                <div class="item">
-                  <h3 class="title">
-                    Tech Lead -
-                    <span class="place"><a href="https://www.kdu.cl">KDU Ingenieria</a></span>
-                    <span class="year">(2022 - 2025)</span>
-                  </h3>
-                  <p>
-                    Desempeñe el cargo de Tech Lead en Transbank, mis objetivos y responsabilidades diarias son:<br/><br/>
-
-                    - Liderar proyectos cloud en equipos de alto rendimiento.<br/>
-                    - Analizar las necesidades del negocio y entregar soluciones rentables de alta calidad.<br/>
-                    - Construcción de arquitecturas y despliegue de los proyectos.<br/>
-                    - Coordinar y validar los desarrollos realizados por el equipo.<br/>
-                    - Estandarizar e implementar metodologías para optimizar los procesos de desarrollo.<br/>
-                    - Formación de personal técnico.<br/>
-                    - Delegar trabajo y asignaciones a los miembros del equipo.<br/>
-                    - Colaborar con el equipo para identificar y solucionar problemas técnicos.<br/>
-                  </p>
-                </div>
-                <div class="item">
-                  <h3 class="title">
-                    Tech Lead - Senior Software Engineer
-                    <span class="place"><a href="https://www.moveapps.cl">Moveapps</a></span>
-                    <span class="year">(2021 - 2022)</span>
-                  </h3>
-                  <p>
-                    Desempeño el cargo de Tech Lead del Software Factory de Moveapps, sus objetivos y actuales responsabilidades son:<br/><br/>
-
-                    - Liderar proyectos digitales en equipos ágiles de alto rendimiento.<br/>
-                    - Analizar las necesidades de los clientes y entregar soluciones digitales de alta calidad.<br/>
-                    - Definición de arquitecturas y procesos de los proyectos.<br/>
-                    - Coordinar y validar los desarrollos realizados por el equipo.<br/>
-                    - Estandarizar e implementar metodologías para optimizar los procesos de desarrollo.<br/>
-                    - Contratación y formación de personal técnico.<br/>
-                    - Delegar trabajo y asignaciones a los miembros del equipo.<br/>
-                    - Colaborar con el equipo para identificar y solucionar problemas técnicos.<br/>
-                  </p>
-                </div>
-                <div class="item">
-                  <h3 class="title">
-                    Full Stack Software Engineer -
-                    <span class="place"><a href="https://www.moveapps.cl">Moveapps</a></span>
-                    <span class="year">(2019 - 2021)</span>
-                  </h3>
-                  <p>
-                    Desempeña funciones como Full stack developer, mis labores principalmente estaban enfocadas al modelado, creación y escalado de arquitecturas de microservicios en Java desplegadas en infraestructuras cloud, esto bajo la metodología lean/agile.
-                  </p>
-                </div>
-                <!--//item-->
-                <div class="item">
-                  <h3 class="title">
-                    Ful stack Software Engineer -
-                    <span class="place"><a href="https://www.kdu.cl">KDU Ingenieria</a></span>
-                    <span class="year">(2018 - 2019)</span>
-                  </h3>
-                  <p>
-                    Desempeñe funciones como Ingeniero de Software full stack, usando metodologías ágiles en equipos de alto desempeño (Coopeuch-Banco de chile).
-                  </p>
-                </div>
-                <!--//item-->
-
-                <div class="item">
-                  <h3 class="title">
-                    Full stack Software Engineer -
-                    <span class="place"><a href="#">Procanchas</a></span>
-                    <span class="year">(2017)</span>
-                  </h3>
-                  <p>
-                    Trabaje como Full stack developer durante un breve periodo de tiempo para Procanchas, Startup de arriendos de canchas de Futbol (www.procanchas.cl), dentro de mis logros puedo destacar la optimización del Backend escrito íntegramente en Java 8 y Spring Framework, la construcción de un gateway de pago integrado al SDK de Transbank Webpay Plus y la configuración junto al despliegue del entorno en la Nube de Amazon Web Services.
-                  </p>
-                </div>
-                <!--//item-->
-                <div class="item">
-                    <h3 class="title">
-                      Software Engineer -
-                      <span class="place"><a href="www.haibusolutions.cl">Haibu Solutions</a></span>
-                      <span class="year">(2016-2015)</span>
-                    </h3>
-                    <p>
-                        Desempeña funciones como ingeniero de software, desarrollando en tecnologías Android de forma nativa, Java Enterprise Edition y Angular JS. (VTR-Fallabela).
-                    </p>
-                  </div>
-                  <!--//item-->
-              </div>
-              <!--//content-->
-            </div>
-            <!--//section-inner-->
-          </section>
-          <!--//section-->
-          <section class="github section">
-            <div class="section-inner shadow-sm rounded">
-              <h2 class="heading">GitHub</h2>
-
-              <div id="github-graph" class="github-graph"></div>
-              <!--//github-graph-->
-
-              <div id="ghfeed" class="ghfeed"></div>
-              <!--//ghfeed-->
-            </div>
-            <!--//secton-inner-->
-          </section>
-          <!--//section-->
         </div>
-        <!--//primary-->
-        <div class="secondary col-lg-4 col-12">
-          <aside class="info aside section">
-            <div class="section-inner shadow-sm rounded">
-              <h2 class="heading sr-only">Donde Basica</h2>
-              <div class="content">
-                <ul class="list-unstyled">
-                  <li>
-                    <i class="fas fa-map-marker-alt"></i
-                    ><span class="sr-only">Location:</span>Region Metropolitana, Chile
-                  </li>
-                  <li>
-                    <i class="fas fa-envelope"></i
-                    ><span class="sr-only">Email:</span
-                    ><a href="mailto:farranos@emeal.nttdata.com">farranos@emeal.nttdata.com</a>
-                  </li>
-                  <li>
-                    <i class="fas fa-link"></i
-                    ><span class="sr-only">Website:</span
-                    ><a href="https://cl.nttdata.com">https://cl.nttdata.com</a>
-                  </li>
-                </ul>
-              </div>
-              <!--//content-->
-            </div>
-            <!--//section-inner-->
-          </aside>
-          <!--//aside-->
+    </section>
 
-          <aside class="skills aside section">
-            <div class="section-inner shadow-sm rounded">
-              <h2 class="heading">Skills</h2>
-              <div class="content">
-                <p class="intro">
-                    Mis Skills principalmente están enfocadas en liderar el proceso de modelado, creación y escalado de software empresarial en infraestructuras cloud, esto bajo la metodología lean/agile.
-                </p>
-
-                <div class="skillset">
-                  <div class="item">
-                    <h3 class="level-title">
-                      Java &amp; Spring Framework<span
-                        class="level-label"
-                        data-toggle="tooltip"
-                        data-placement="left"
-                        data-animation="true"
-                        title="Java 8, JPA, Spring Framework (Spring Boot, Spring Cloud, Spring Security, Spring Core)"
-                        ><i class="fas fa-info-circle"></i>Experto</span
-                      >
-                    </h3>
-                    <div class="level-bar">
-                      <div class="level-bar-inner" data-level="90%"></div>
-                    </div>
-                    <!--//level-bar-->
-                  </div>
-                  <!--//item-->
-
-                  <div class="item">
-                    <h3 class="level-title">
-                        Amazon Web Services (AWS)<span
-                        class="level-label"
-                        data-toggle="tooltip"
-                        data-placement="left"
-                        data-animation="true"
-                        title="Amazon Web Services (EC2, Cloudwatch, S3, CodeCommit, Lambda, RDS)"
-                        ><i class="fas fa-info-circle"></i>Avanzado</span
-                      >
-                    </h3>
-                    <div class="level-bar">
-                      <div class="level-bar-inner" data-level="80%"></div>
-                    </div>
-                    <!--//level-bar-->
-                  </div>
-                  <!--//item-->
-
-                  <div class="item">
-                    <h3 class="level-title">
-                        Scrum<span
-                        class="level-label"
-                        data-toggle="tooltip"
-                        data-placement="left"
-                        data-animation="true"
-                        title="Lean agile"
-                        ><i class="fas fa-info-circle"></i>Avanzado</span
-                      >
-                    </h3>
-                    <div class="level-bar">
-                      <div class="level-bar-inner" data-level="70%"></div>
-                    </div>
-                    <!--//level-bar-->
-                  </div>
-                  <!--//item-->
-
-                  <div class="item">
-                    <h3 class="level-title">
-                        Docker<span
-                        class="level-label"
-                        data-toggle="tooltip"
-                        data-placement="left"
-                        data-animation="true"
-                        title="Docker hub, Docker Swarm, DockerFile"
-                        ><i class="fas fa-info-circle"></i>Medio</span
-                      >
-                    </h3>
-                    <div class="level-bar">
-                      <div class="level-bar-inner" data-level="60%"></div>
-                    </div>
-                    <!--//level-bar-->
-                  </div>
-                  <!--//item-->
-                  <div class="item">
-                    <h3 class="level-title">
-                        Node JS<span
-                        class="level-label"
-                        data-toggle="tooltip"
-                        data-placement="left"
-                        data-animation="true"
-                        title="Express Framework"
-                        ><i class="fas fa-info-circle"></i>Medio</span
-                      >
-                    </h3>
-                    <div class="level-bar">
-                      <div class="level-bar-inner" data-level="50%"></div>
-                    </div>
-                    <!--//level-bar-->
-                  </div>
-
-                  <!--//item-->
-                  <div class="item">
-                    <h3 class="level-title">
-                        React<span
-                        class="level-label"
-                        data-toggle="tooltip"
-                        data-placement="left"
-                        data-animation="true"
-                        title="Frontend"
-                        ><i class="fas fa-info-circle"></i>Basico</span
-                      >
-                    </h3>
-                    <div class="level-bar">
-                      <div class="level-bar-inner" data-level="30%"></div>
-                    </div>
-                    <!--//level-bar-->
-                  </div>
-
-
-                  <div class="item">
-                    <h3 class="level-title">
-                        Javascript<span
-                        class="level-label"
-                        data-toggle="tooltip"
-                        data-placement="left"
-                        data-animation="true"
-                        title="Perfeccionando"
-                        ><i class="fas fa-info-circle"></i>Medio</span
-                      >
-                    </h3>
-                    <div class="level-bar">
-                      <div class="level-bar-inner" data-level="50%"></div>
-                    </div>
-                    <!--//level-bar-->
-                  </div>
-                  <div class="item">
-                    <h3 class="level-title">
-                      Serverless<span
-                        class="level-label"
-                        data-toggle="tooltip"
-                        data-placement="left"
-                        data-animation="true"
-                        title="Estoy aprendiendo."
-                        ><i class="fas fa-info-circle"></i>medio</span
-                      >
-                    </h3>
-                    <div class="level-bar">
-                      <div class="level-bar-inner" data-level="50%"></div>
-                    </div>
-                    <!--//level-bar-->
-                  </div>
-                  <!--//item-->
-
-                  <p>
-                    <a class="more-link" href="https://www.github.cl/francosebastian"
-                      ><i class="fas fa-external-link-alt"></i>Ver mi GitHub</a
-                    >
-                  </p>
-                </div>
-              </div>
-              <!--//content-->
-            </div>
-            <!--//section-inner-->
-          </aside>
-          <!--//section-->
-
-          <aside class="testimonials aside section">
-            <div class="section-inner shadow-sm rounded">
-              <h2 class="heading">Testimonios</h2>
-              <div class="content">
-
-                <div class="item">
-                  <blockquote class="quote">
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Sobre <span>mí</span></h2>
+            <div class="about-grid">
+                <div class="about-content">
                     <p>
-                      <i class="fas fa-quote-left"></i>Franco es un excelente profesional IT, posee un gran conocimiento y
-                       manejo de tecnologías orientadas al desarrollo de plataformas digitales con foco en el usuario.
-                       Trabajamos en proyectos de alto impacto para el canal digital de UNO afp. Destaco su alto delivery
-                       en proyectos de gran escala. 100% recomendable.
+                        Soy un profesional de TI con una trayectoria enfocada en el desarrollo de software empresarial de alta calidad. 
+                        A lo largo de mi carrera he trabajado en diversos sectores incluyendo fintech, retail y salud, siempre buscando 
+                        entregar soluciones que generen valor real al negocio.
                     </p>
-                  </blockquote>
-                  <p class="source">
-                    <span class="name">Diego Silva Echaniz
-                    </span><br /><span class="title"
-                      >Jefe Canal Digital en UNO afp</span>
-                  </p>
-                </div>
-                <!--//item-->
-
-                <p>
-                  <a class="more-link" href="https://www.linkedin.com/in/diegoelias/"
-                    ><i class="fas fa-external-link-alt"></i>Linkedin</a
-                  >
-                </p>
-              </div>
-              <div class="content">
-
-                <div class="item">
-                  <blockquote class="quote">
                     <p>
-                      <i class="fas fa-quote-left"></i>Trabajé con Franco en el mismo proyecto, con tecnologías backend orientadas a microservicios con Java y tecnologias front con React. Demostrando bastante conocimiento y manejo de los contenidos.
+                        Me caracteriza mi capacidad de adaptación a nuevas tecnologías, proactividad y facilidad para el análisis de procesos de negocio. 
+                        Tengo experiencia liderando equipos técnicos y trabajando en metodologías ágiles.
                     </p>
-                  </blockquote>
-                  <p class="source">
-                    <span class="name">Cristian Lopez Constenla</span><br /><span class="title"
-                      >Líder Técnico Backend en MoveApps</span
-                    >
-                  </p>
+                    <p>
+                        <strong>Especialidades:</strong> Java EE, Amazon Web Services, Docker, Kubernetes, Salesforce Integration, IA
+                    </p>
+                    <div class="highlight">
+                        <div class="stat">
+                            <div class="stat-number">9+</div>
+                            <div class="stat-label">Años de experiencia</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Proyectos en producción</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Certificaciones</div>
+                        </div>
+                    </div>
                 </div>
-                <!--//item-->
-
-                <p>
-                  <a class="more-link" href="https://www.linkedin.com/in/cristian-lopez-constenla-96079412a/"
-                    ><i class="fas fa-external-link-alt"></i>Linkedin</a
-                  >
-                </p>
-              </div>
-              <!--//content-->
+                <div class="about-info">
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Región Metropolitana, Chile</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:francosebastian22@gmail.com">francosebastian22@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/francosebastianarrano/" target="_blank">LinkedIn</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/francosebastian" target="_blank">GitHub</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe"></i>
+                            <a href="https://francosebastian.github.io" target="_blank">Portfolio</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!--//section-inner-->
-          </aside>
-          <!--//section-->
+        </div>
+    </section>
 
-          <aside class="education aside section">
-            <div class="section-inner shadow-sm rounded">
-              <h2 class="heading">Educación</h2>
-              <div class="content">
-                <div class="item">
-                  <h3 class="title">
-                    <i class="fas fa-graduation-cap"></i> Ingenieria en Informatica
-                  </h3>
-                  <h4 class="university">
-                    DUOC UC
-                    <span class="year">(2014-2016)</span>
-                  </h4>
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experiencia <span>Laboral</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Junio 2025 - Presente</div>
+                    <h3 class="timeline-title">Integration Lead / Senior Technical Lead</h3>
+                    <div class="timeline-company">NTT DATA Europe & Latam</div>
+                    <div class="timeline-description">
+                        <p>Actualmente colaboro como Integration Lead en Bci (Banco de Crédito e Inversiones), una de las instituciones financieras más innovadoras de Chile. Mi trabajo diario se centra en el desarrollo de soluciones críticas en Java 17 para la integración de Salesforce con ecosistemas financieros.</p>
+                        <ul>
+                            <li>Desarrollo de microservices en Java 17 para integración con Salesforce CRM</li>
+                            <li>Implementación de soluciones en Microsoft Azure</li>
+                            <li>Validación de código con SonarQube y Checkstyle</li>
+                            <li>Testing de carga con JMeter</li>
+                            <li>Uso de IA (Github Copilot, Google Gemini, MCP) para productividad</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java JDK 17</span>
+                            <span class="tech-tag">Microsoft Azure</span>
+                            <span class="tech-tag">Spring Framework</span>
+                            <span class="tech-tag">Salesforce CRM</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Jenkins</span>
+                            <span class="tech-tag">SonarQube</span>
+                            <span class="tech-tag">MCP</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="item">
-                  <h3 class="title">
-                    <i class="fas fa-graduation-cap"></i> Desarrollo de Aplicaciones Moviles
-                  </h3>
-                  <h4 class="university">
-                    Tecnologico de Monterrey (Mexico)
-                    <span class="year">2014</span>
-                  </h4>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Junio 2024 - Febrero 2025</div>
+                    <h3 class="timeline-title">Full Stack Software Engineer</h3>
+                    <div class="timeline-company">KDU Ingeniería</div>
+                    <div class="timeline-description">
+                        <p>Consultoría en áreas de negocio relacionadas con tecnología de la información para múltiples clientes bajo el modelo de fábrica de software.</p>
+                        <ul>
+                            <li>Transbank Mandato Digital: Diseño y desarrollo de microservicios en Java 8 con Oracle WebLogic 12c</li>
+                            <li>GVA Andexport: Desarrollo de dashboard para seguimiento de KPI comerciales</li>
+                            <li>Transbank PSP - Gestión Web: Actualización de Web Portlet en Lifteral con Java 8</li>
+                            <li>Transbank - API de Reportes Estratégicos: Integración con Apache Kafka y Schema Registry</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">AWS (EC2, ECS, EKS, RDS)</span>
+                            <span class="tech-tag">Java 17/8</span>
+                            <span class="tech-tag">Oracle WebLogic</span>
+                            <span class="tech-tag">Apache Kafka</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Angular</span>
+                        </div>
+                    </div>
                 </div>
-                <!--//item-->
-                <div class="item">
-                  <h3 class="title">
-                    <i class="fas fa-graduation-cap"></i> Analista Programador Computacional
-                  </h3>
-                  <h4 class="university">
-                    DUOC UC <span class="year">(2012-2014)</span>
-                  </h4>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Junio 2022 - Junio 2024</div>
+                    <h3 class="timeline-title">Technical Lead</h3>
+                    <div class="timeline-company">KDU Ingeniería (Transbank)</div>
+                    <div class="timeline-description">
+                        <p>Tech Lead en Transbank para el proyecto POS Multivendor, líderando proyectos cloud en equipos de alto rendimiento.</p>
+                        <ul>
+                            <li>Liderazgo de proyectos cloud en equipos de alto rendimiento</li>
+                            <li>Análisis de necesidades del negocio y entrega de soluciones</li>
+                            <li>Construcción de arquitecturas y despliegue de proyectos</li>
+                            <li>Coordinación y validación de desarrollos del equipo</li>
+                            <li>Formación de personal técnico</li>
+                        </ul>
+                        <p><strong>Proyecto destacado:</strong> Transbank POS Multivendor - Construcción de infraestructura Cloud AWS para +300,000 dispositivos POS</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Java 17</span>
+                            <span class="tech-tag">Apache Kafka</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Terraform</span>
+                        </div>
+                    </div>
                 </div>
-                <!--//item-->
-              </div>
-              <!--//content-->
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Enero 2021 - Junio 2022</div>
+                    <h3 class="timeline-title">Tech Lead / Senior Full Stack Software Engineer</h3>
+                    <div class="timeline-company">MoveApps</div>
+                    <div class="timeline-description">
+                        <p>Liderazgo del Software Factory y desarrollo de arquitecturas cloud-native de alta demanda.</p>
+                        <ul>
+                            <li>Migración de Framework Node JS de Sails.js a Nest.js</li>
+                            <li>Implementación de Docker Compose para entornos locales</li>
+                            <li>Desarrollo de arquitectura cloud-native para Gamma Leasing</li>
+                        </ul>
+                        <p><strong>Proyectos:</strong> ABC Din, AFP UNO, AFP UNO Retiro 10%</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java 8</span>
+                            <span class="tech-tag">Node.js/Nest.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Serverless</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Marzo 2018 - Abril 2019</div>
+                    <h3 class="timeline-title">Full Stack Software Engineer</h3>
+                    <div class="timeline-company">KDU Ingeniería</div>
+                    <div class="timeline-description">
+                        <p>Ingeniero de software full stack usando metodologías ágiles.</p>
+                        <p><strong>Proyecto:</strong> Coopeuch Átomo - Créditos de consumo en terreno</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java 8</span>
+                            <span class="tech-tag">Spring Framework</span>
+                            <span class="tech-tag">Angular JS</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Octubre 2017 - Febrero 2018</div>
+                    <h3 class="timeline-title">Full Stack Developer</h3>
+                    <div class="timeline-company">ProCanchas</div>
+                    <div class="timeline-description">
+                        <p>Startup de arriendos de canchas de fútbol. Optimización del Backend en Java 8, integración con Transbank Webpay Plus y despliegue en AWS.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Angular JS</span>
+                            <span class="tech-tag">Java 8</span>
+                            <span class="tech-tag">Spring Framework</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Julio 2016 - Septiembre 2017</div>
+                    <h3 class="timeline-title">Software Engineer</h3>
+                    <div class="timeline-company">Haibu Solutions</div>
+                    <div class="timeline-description">
+                        <p>Desarrollo en Android nativo, Java EE y Angular JS.</p>
+                        <p><strong>Proyectos:</strong> Falabella Connect Android (App punto de venta), Falabella Connect Web</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Java EE</span>
+                            <span class="tech-tag">Angular JS</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--//section-inner-->
-          </aside>
-          <!--//section-->
+        </div>
+    </section>
 
-          <aside class="languages aside section">
-            <div class="section-inner shadow-sm rounded">
-              <h2 class="heading">Lenguajes</h2>
-              <div class="content">
-                <ul class="list-unstyled">
-                  <li class="item">
-                    <span class="title"><strong>Español:</strong></span>
-                    <span class="level"
-                      >Lengua Nativa <br class="visible-xs" /><i
-                        class="fas fa-star"
-                      ></i>
-                      <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos <span>Destacados</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="assets/images/projects/project-featured.jpg" alt="AFP UNO" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">AFP UNO Retiro 10%</h3>
+                        <p class="project-description">Creación de sistemas backend de alta concurrencia para el retiro del 10% de fondos de pensiones. Arquitectura y modelado de la solución.</p>
+                        <a href="https://www.uno.cl/tramite-online/formulario-retiro" target="_blank" class="project-link">
+                            Ver proyecto <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="assets/images/projects/project-1.png" alt="UNO AFP" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">UNO AFP - Sitio Público y Privado</h3>
+                        <p class="project-description">Creación de sistemas backend, sitio público y privado para el inicio de operaciones en octubre 2019.</p>
+                        <a href="https://www.uno.cl" target="_blank" class="project-link">
+                            Ver proyecto <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="assets/images/projects/project-transbank-pos.webp" alt="Transbank POS" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Transbank POS Multivendor</h3>
+                        <p class="project-description">Infraestructura Cloud AWS para administración de +300,000 dispositivos POS en Chile.</p>
+                        <span class="project-link" style="color: var(--text-muted);">Proyecto interno</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://athleticmelipilla.cl/logo.png" alt="Melipilla Athletic Club" class="project-image" style="object-fit: contain; background: #f8f9fa;">
+                    <div class="project-content">
+                        <h3 class="project-title">Melipilla Athletic Club</h3>
+                        <p class="project-description">Sitio web para club de rugby con Next.js, Neon (PostgreSQL) y Mercado Pago. Gestión de noticias, categorías, socios y pagos online.</p>
+                        <a href="https://athleticmelipilla.cl/" target="_blank" class="project-link">
+                            Ver proyecto <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Santo Pan" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Santo Pan - Panadería Artesanal</h3>
+                        <p class="project-description">E-commerce para panadería artesanal con Next.js, PostgreSQL y Docker. Catálogo de productos, gestión de pedidos y panel admin.</p>
+                        <span class="project-link" style="color: var(--text-muted);">Proyecto personal (en desarrollo)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills <span>Técnicos</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-name">
+                        Java & Spring Framework
+                        <span class="skill-level">Experto</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-name">
+                        Amazon Web Services
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-name">
+                        Docker & Kubernetes
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-name">
+                        Microservices Architecture
+                        <span class="skill-level">Experto</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-name">
+                        Node.js & Nest.js
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-name">
+                        Angular
+                        <span class="skill-level">Medio</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-name">
+                        React
+                        <span class="skill-level">Básico</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 40%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-name">
+                        Salesforce CRM
+                        <span class="skill-level">Medio</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-name">
+                        Terraform
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-name">
+                        Inteligencia Artificial
+                        <span class="skill-level">Aprendiendo</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 50%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title"><span>Educación</span></h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3 class="education-title">Ingeniería en Informática</h3>
+                    <div class="education-school">DUOC UC</div>
+                    <div class="education-year">2014 - 2016</div>
+                </div>
+
+                <div class="education-card">
+                    <h3 class="education-title">Desarrollo de Aplicaciones Móviles</h3>
+                    <div class="education-school">Tecnológico de Monterrey (México)</div>
+                    <div class="education-year">2014</div>
+                </div>
+
+                <div class="education-card">
+                    <h3 class="education-title">Analista Programador Computacional</h3>
+                    <div class="education-school">DUOC UC</div>
+                    <div class="education-year">2012 - 2014</div>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 3rem;">Idiomas</h2>
+            <div class="languages-list">
+                <div class="language-item">
+                    <span class="language-name">Español</span>
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </span>
-                  </li>
-                  <!--//item-->
-                  <li class="item">
-                    <span class="title"><strong>Ingles:</strong></span>
-                    <span class="level"
-                      >Nivel Avanzado
-                      <br class="visible-sm visible-xs" /><i
-                        class="fas fa-star"
-                      ></i>
-                      <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half"></i
-                    ></span>
-                  </li>
-                  <!--//item-->
-                </ul>
-              </div>
-              <!--//content-->
+                    <span class="language-level">Nativo</span>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">Inglés</span>
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </span>
+                    <span class="language-level">Avanzado (TOEIC)</span>
+                </div>
             </div>
-            <!--//section-inner-->
-          </aside>
-          <!--//section-->
+
+            <h2 class="section-title" style="margin-top: 3rem;">Certificaciones</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3 class="education-title">AWS Certified Cloud Practitioner</h3>
+                    <div class="education-school">Amazon Web Services (AWS)</div>
+                    <div class="education-year">Expedición: Ago. 2021</div>
+                    <a href="https://www.credly.com/badges/b0d24fcb-5773-4a46-bc76-43394ade16fa" target="_blank" class="project-link" style="margin-top: 0.5rem; display: inline-block;">
+                        Ver certificación <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <!--//secondary-->
-      </div>
-      <!--//row-->
-    </div>
-    <!--//masonry-->
+    </section>
 
-    <!-- ******FOOTER****** -->
-    <footer class="footer">
-      <div class="container text-center">
-        <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-        <small class="copyright"
-          >Designed with <i class="fas fa-heart"></i> by
-          <a href="https://themes.3rdwavemedia.com" target="_blank"
-            >Xiaoying Riley</a
-          >
-          for developers</small
-        >
-      </div>
-      <!--//container-->
+    <footer id="contact">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/francosebastianarrano/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/francosebastian" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:francosebastian22@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Franco Sebastian Arraño Silva. Todos los derechos reservados.</p>
+        </div>
     </footer>
-    <!--//footer-->
 
-    <!-- Javascript -->
-    <script
-      type="text/javascript"
-      src="assets/plugins/jquery-3.4.1.min.js"
-    ></script>
-    <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
-    <script
-      type="text/javascript"
-      src="assets/plugins/bootstrap/js/bootstrap.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"
-    ></script>
-    <!-- github calendar plugin -->
-    <script
-      type="text/javascript"
-      src="assets/plugins/github-calendar/dist/github-calendar.min.js"
-    ></script>
-    <!-- github activity plugin -->
-    <script
-      type="text/javascript"
-      src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/plugins/github-activity/github-activity-0.1.5.min.js"
-    ></script>
-    <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
-  </body>
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const icon = themeToggle.querySelector('i');
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-theme', newTheme);
+            
+            if (newTheme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+            
+            localStorage.setItem('theme', newTheme);
+        });
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            if (savedTheme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+    </script>
+</body>
 </html>
