@@ -695,8 +695,29 @@
             color: white;
         }
 
+        .mobile-controls {
+            display: none;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
+            .mobile-controls {
+                display: flex;
+                position: fixed;
+                top: 1rem;
+                right: 1rem;
+                z-index: 1000;
+                gap: 0.5rem;
+            }
+
+            .mobile-controls button {
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                color: var(--text-primary);
+                padding: 0.5rem;
+                border-radius: 8px;
+                cursor: pointer;
+            }
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -759,6 +780,15 @@
             </nav>
         </div>
     </header>
+
+    <div class="mobile-controls">
+        <button id="langToggleMobile" aria-label="Cambiar idioma">
+            <span id="langFlagMobile">🇪🇸</span>
+        </button>
+        <button id="themeToggleMobile" aria-label="Cambiar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
 
     <section class="hero">
         <div class="parallax-bg"></div>
@@ -1308,6 +1338,31 @@
             localStorage.setItem('theme', newTheme);
         });
 
+        const themeToggleMobile = document.getElementById('themeToggleMobile');
+        if (themeToggleMobile) {
+            const iconMobile = themeToggleMobile.querySelector('i');
+            themeToggleMobile.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                html.setAttribute('data-theme', newTheme);
+                
+                if (newTheme === 'dark') {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                    iconMobile.classList.remove('fa-moon');
+                    iconMobile.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                    iconMobile.classList.remove('fa-sun');
+                    iconMobile.classList.add('fa-moon');
+                }
+                
+                localStorage.setItem('theme', newTheme);
+            });
+        }
+
         // Simplified translations - replaces all i18n elements
         const translations = {
             es: {
@@ -1588,6 +1643,11 @@
                 if(t[key]) el.textContent = t[key];
             });
             langFlag.textContent = currentLang === 'es' ? '🇪🇸 ESP' : '🇬🇧 ENG';
+            
+            const langFlagMobile = document.getElementById('langFlagMobile');
+            if (langFlagMobile) {
+                langFlagMobile.textContent = currentLang === 'es' ? '🇪🇸' : '🇬🇧';
+            }
         }
 
         langToggle.addEventListener('click', () => {
@@ -1595,6 +1655,15 @@
             applyTranslations();
             localStorage.setItem('lang', currentLang);
         });
+
+        const langToggleMobile = document.getElementById('langToggleMobile');
+        if (langToggleMobile) {
+            langToggleMobile.addEventListener('click', () => {
+                currentLang = currentLang === 'es' ? 'en' : 'es';
+                applyTranslations();
+                localStorage.setItem('lang', currentLang);
+            });
+        }
 
         applyTranslations();
 
